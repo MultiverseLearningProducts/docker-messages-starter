@@ -33,7 +33,7 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, async () => {
 	try {
-		await sequelize.authenticate();
+		await sequelize.sync();
 		console.log(`Listening on port ${port}`);
 	} catch (err) {
 		console.error(err);
